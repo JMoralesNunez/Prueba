@@ -30,7 +30,7 @@ while Menu:  #Bucle para mostrar el menu principal
         while True: #While loop to keep adding products
             while True: #While loop to validate the name of the product input  
                 name = input("Ingresa el nombre del producto: ")
-                if name.isalpha() and name not in inventory.keys(): #If the product is already on the inventory, it won't let it add it again, because it would overwrite the product
+                if name.isalpha() and name.capitalize() not in inventory.keys(): #If the product is already on the inventory, it won't let it add it again, because it would overwrite the product
                     break
                 else:
                     print(WARNING + "El nombre del producto no es válido o ya se encuentra en el inventario" + RESET)
